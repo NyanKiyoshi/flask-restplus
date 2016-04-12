@@ -47,7 +47,7 @@ def camel_to_dash(value):
     :rtype: str
     '''
     first_cap = FIRST_CAP_RE.sub(r'\1_\2', value)
-    return ALL_CAP_RE.sub(r'\1_\2', first_cap).lower()
+    return str(ALL_CAP_RE.sub(r'\1_\2', first_cap).lower())
 
 
 def default_id(resource, method):
